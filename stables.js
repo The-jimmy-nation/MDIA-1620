@@ -150,12 +150,12 @@ function logLateRent(horse) {
     console.log (horse.name + " owes $" + totalOwned.toFixed(2) + " if rent is late.");
 };
 
-logLateRent(Horses[0]);
+logLateRent(horses[0]);
 
 function getNickname(horse) {
     return horse.nickname;
 };
 
-const nickname = getNickname(horse[1]);
+const nickname = getNickname(horses[1]);
 console.log(nickname);
 
