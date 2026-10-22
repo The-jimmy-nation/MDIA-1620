@@ -136,3 +136,26 @@ horses.forEach(function (horse) {
     horse.isHungry = true;
 });
 
+const totalStalls = 20;
+
+function logAvailbleStalls() {
+    const availableStalls = totalStalls - horses.length;
+    console.log("Available stalls: " + availableStalls);
+};
+
+logAvailbleStalls();
+
+function logLateRent(horse) {
+    const totalOwned = horse.monthlyRent * 1.10;
+    console.log (horse.name + " owes $" + totalOwned.toFixed(2) + " if rent is late.");
+};
+
+logLateRent(Horses[0]);
+
+function getNickname(horse) {
+    return horse.nickname;
+};
+
+const nickname = getNickname(horse[1]);
+console.log(nickname);
+
