@@ -97,65 +97,76 @@
 // the return value outside of the function.
 
 const horses = [
-    {
-        name: "Thunder",
-        nickname: "Thor",
-        favouriteTreat: "Apples",
-        age: 8,
-        monthlyRent: 500,
-        location: true,
-        colour: "Black",
-        breed: "Friesian"
-    },
-    {
-        name: "Willow",
-        nickname: "Willy",
-        favouriteTreat: "Carrots",
-        age: 5,
-        monthlyRent: 750,
-        location: false,
-        colour: "Chestnut:",
-        breed: "Belgian"
-    }
+  {
+    name: "Thunder",
+    nickname: "Thor",
+    favouriteTreat: "Apples",
+    age: 8,
+    monthlyRent: 500,
+    location: true,
+    colour: "Black",
+    breed: "Friesian",
+    likeJumping: true
+  },
+  {
+    name: "Willow",
+    nickname: "Willy",
+    favouriteTreat: "Carrots",
+    age: 5,
+    monthlyRent: 750,
+    location: false,
+    colour: "Chestnut:",
+    breed: "Belgian",
+    likesJumping: false
+  }
 ];
 
 const newHorse = {
-    name: "Starboy",
-    nickname: "Starry",
-    favouriteTreat: "Candy Cane",
-    age: 7,
-    monthlyRent: 600,
-    location: true,
-    colour: "Dark Grey",
-    breed: "Caspian",
+  name: "Starboy",
+  nickname: "Starry",
+  favouriteTreat: "Candy Cane",
+  age: 7,
+  monthlyRent: 600,
+  location: true,
+  colour: "Dark Grey",
+  breed: "Caspian",
+  likesJumping: true
 };
 
 horses.push(newHorse);
 
-horses.forEach(function (horse) {
-    horse.isHungry = true;
-});
+horses[0].isHungry = true;
+horses[1].isHungry = false;
+horses[2].isHungry = true;
 
 const totalStalls = 20;
 
-function logAvailbleStalls() {
-    const availableStalls = totalStalls - horses.length;
+function showAvailableStalls() {
+  const availableStalls = totalStalls - horses.length;
+
+  if (availableStalls > 0) {
     console.log("Available stalls: " + availableStalls);
-};
+  } else {
+    console.log("There are no stalls available.");
+  }
+}
 
-logAvailbleStalls();
+showAvailableStalls();
 
-function logLateRent(horse) {
-    const totalOwned = horse.monthlyRent * 1.10;
-    console.log (horse.name + " owes $" + totalOwned.toFixed(2) + " if rent is late.");
-};
 
-logLateRent(horses[0]);
+function showRentOwed(horse, isLate) {
+  if (isLate) {
+    console.log(horse.name + " owes " + (horse.monthlyRent * 1.1));
+  } else {
+    console.log(horse.name + " owes " + horse.monthlyRent);
+  }
+}
+
+showRentOwed(horses[0], true);
 
 function getNickname(horse) {
-    return horse.nickname;
+  return horse.nickname;
 };
 
 const nickname = getNickname(horses[1]);
 console.log(nickname);
-
