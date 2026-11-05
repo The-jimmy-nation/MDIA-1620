@@ -43,6 +43,86 @@
 //                                                          ##
 //
 
+// Assignment 1 - Stables.js //
+let horses = [
+  {
+    name: "Thunder",
+    nickname: "Thor",
+    favouriteTreat: "Apples",
+    age: 8,
+    monthlyRent: 500,
+    location: true,
+    colour: "Black",
+    breed: "Friesian",
+    likeJumping: true
+  },
+  {
+    name: "Willow",
+    nickname: "Willy",
+    favouriteTreat: "Carrots",
+    age: 5,
+    monthlyRent: 750,
+    location: false,
+    colour: "Chestnut:",
+    breed: "Belgian",
+    likesJumping: false
+  }
+];
+
+const newHorse = {
+  name: "Starboy",
+  nickname: "Starry",
+  favouriteTreat: "Candy Cane",
+  age: 7,
+  monthlyRent: 600,
+  location: true,
+  colour: "Dark Grey",
+  breed: "Caspian",
+  likesJumping: true
+};
+
+horses.push(newHorse);
+
+horses[0].isHungry = true;
+horses[1].isHungry = false;
+horses[2].isHungry = true;
+
+const totalStalls = 20;
+
+function showAvailableStalls() {
+  const availableStalls = totalStalls - horses.length;
+
+  if (availableStalls > 0) {
+    console.log("Available stalls: " + availableStalls);
+  } else {
+    console.log("There are no stalls available.");
+  }
+}
+
+showAvailableStalls();
+
+
+function showRentOwed(horse, isLate) {
+  if (isLate) {
+    console.log(horse.name + " owes " + (horse.monthlyRent * 1.1));
+  } else {
+    console.log(horse.name + " owes " + horse.monthlyRent);
+  }
+}
+
+showRentOwed(horses[0], true);
+
+function getNickname(horse) {
+  return horse.nickname;
+};
+
+const nickname = getNickname(horses[1]);
+console.log(nickname);
+
+// End of Assignment 1 - Stables.js //
+
+// Assignments 2 - Stables.js //
+
 const horses = [
   {
     name: "Thunder",
@@ -116,7 +196,7 @@ showAvailableStalls();
 
 function showRentOwed(horse, isLate) {
   if (isLate) {
-    console.log(horse.name + " owes " + (horse.monthlyRent * 1.2 ) + " (including late fee)");
+    console.log(horse.name + " owes " + (horse.monthlyRent * 1.2) + " (including late fee)");
   } else {
     console.log(horse.name + " owes " + horse.monthlyRent);
   }
@@ -137,3 +217,5 @@ const nickname = getNickname(horses[1]);
 console.log(nickname);
 
 // console log the nickname of the horse outside of the function //
+
+// End of Assignment 2 - Stables.js //

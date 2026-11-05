@@ -96,7 +96,7 @@
 // Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
 // the return value outside of the function.
 
-const horses = [
+let horses = [
   {
     name: "Thunder",
     nickname: "Thor",
