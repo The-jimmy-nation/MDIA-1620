@@ -219,3 +219,28 @@ console.log(nickname);
 // console log the nickname of the horse outside of the function //
 
 // End of Assignment 2 - Stables.js //
+
+
+// Add loop that checks to find out if a certain horse likes a particular treat. If the horse does not like
+// the treat, log out their disatisfaction and check the next horse. Exit the loop when you find
+// the horse that likes the treat.
+
+// Create a function references one of your unique horse properties. It should
+// contain a conditional or a loop. Invoke it for each horse.
+
+// Morning! Create and invoke a function that moves any number horses of your choice outside. It should
+// log out statement indicating the horses have been moved to spend time in the sun. 
+// (The function should be able to move a single horse, or multiple horses, depending on the parameters specified)
+
+// Food! Create and invoke a function that feeds your horses. If the horse is outside, it
+// should call them in, and then all horses should be fed a treat. Log the activity of
+// the horses.
+
+// Bedtime! Update the function that lets your horses outside so that it also calls them
+// in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
+
+//------------------------- Bonus -------------------------//
+
+// Replace the ascii art at the top of the file with art representing your stable.
+// Initialize a method on your horses that moves them inside if they are outside, and
+// vice versa.
